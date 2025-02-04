@@ -21,4 +21,5 @@ export const Sun = dynamic(() => import('lucide-react').then(m => m.Sun), { ssr:
 export const Moon = dynamic(() => import('lucide-react').then(m => m.Moon), { ssr: false });
 export const Github = dynamic(() => import('lucide-react').then(m => m.Github), { ssr: false });
 export const Linkedin = dynamic(() => import('lucide-react').then(m => m.Linkedin), { ssr: false });
+export const Mail = dynamic(() => import('lucide-react').then(m => m.Mail), { ssr: false });
 export const Tag = dynamic(() => import('lucide-react').then(m => m.Tag), { ssr: false });
