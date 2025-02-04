@@ -167,7 +167,7 @@ const newsItems = [
     description: "Our work on model extraction attacks was accepted as a poster at WACV 2024."
   },
   {
-    date: "2024",
+    date: "March 2024 - July 2024",
     title: "Research Internship at NII",
     description: "Started research internship at National Institute of Informatics, Tokyo."
   }

@@ -172,9 +172,9 @@ const publications = [
     year: 2024,
     type: "conference" as PublicationType,
     abstract: "We propose a novel approach to enhance the effectiveness of black-box model extraction attacks using ensemble-based sample selection strategies...",
-    pdf: "#",
-    code: "#",
-    slides: "#",
+    pdf: "https://openaccess.thecvf.com/content/WACV2024/html/Jindal_Army_of_Thieves_Enhancing_Black-Box_Model_Extraction_via_Ensemble_Based_WACV_2024_paper.html",
+    code: "https://github.com/akshitjindal1/AOT_WACV",
+    slides: "https://docs.google.com/presentation/d/1jVxVVKzJEfzxpsY5vxQlbQFXbcDP3mrftoQ8ZQouFb4/edit?usp=sharing",
     tags: ["Model Extraction", "Machine Learning Security", "WACV"]
   },
   {
@@ -184,7 +184,7 @@ const publications = [
     year: 2022,
     type: "patent" as PublicationType,
     abstract: "A novel method for generating and assigning unique voice characteristics to electronic devices...",
-    pdf: "#",
+    pdf: "https://patentimages.storage.googleapis.com/e5/ac/84/c365fe3c63e67d/US20220137917A1.pdf",
     tags: ["Text-to-Speech", "Voice Technology", "Patent"]
   }
 ];
