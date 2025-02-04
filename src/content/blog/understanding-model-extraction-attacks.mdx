@@ -1,0 +1,77 @@
+---
+title: "Understanding Model Extraction Attacks"
+date: "2024-02-04"
+author: "Akshit Jindal"
+tags: ["ML Security", "Model Extraction", "Research"]
+image: "/assets/img/blog/1.jpg"
+readingTime: 8
+---
+
+```python
+def extract_model(target_model, x_seed, num_queries=1000):
+    """
+    A simple model extraction attack implementation
+    
+    Args:
+        target_model: The victim model we want to extract
+        x_seed: Initial data points to start the extraction
+        num_queries: Number of queries to make to the target model
+    """
+    # Generate synthetic data points around the seed data
+    x_query = generate_synthetic_points(x_seed, num_queries)
+    
+    # Query the target model to get labels
+    y_query = target_model.predict(x_query)
+    
+    # Train the substitute model
+    substitute_model = LogisticRegression()
+    substitute_model.fit(x_query, y_query)
+    
+    return substitute_model
+```
+
+## Why are Model Extraction Attacks Dangerous?
+
+Model extraction attacks present several security risks:
+
+1. They can bypass the monetization of ML APIs by creating a local copy of the model
+2. They might expose proprietary model architectures and training techniques
+3. They enable other attacks like adversarial example generation
+
+## Our Recent Research
+
+In our WACV 2024 paper, we introduced a novel approach to enhance model extraction attacks using ensemble-based sample selection. The key insight is that by carefully selecting which inputs to query, we can extract more accurate models with fewer queries.
+
+### The Ensemble Approach
+
+Our method uses an ensemble of substitute models to identify the most informative query points. Here's how it works:
+
+1. Train multiple substitute models with different architectures
+2. Use disagreement between ensemble members to select query points
+3. Actively learn from the target model's responses
+
+## Defending Against Model Extraction
+
+While perfect defense against model extraction might be impossible, several approaches can help:
+
+1. **Rate Limiting**: Restrict the number of queries from each user
+2. **Output Perturbation**: Add controlled noise to model predictions
+3. **Watermarking**: Embed verifiable signatures in model behavior
+
+## Future Directions
+
+Our research suggests several promising directions for future work:
+
+1. Developing more robust defensive techniques
+2. Understanding the theoretical limits of model extraction
+3. Exploring the connection between extraction and privacy
+
+## Conclusion
+
+Model extraction remains a significant challenge in ML security. Through our research, we're working to better understand these attacks and develop effective defenses. Stay tuned for more updates on our ongoing work in this area.
+
+## References
+
+1. Our WACV 2024 paper: "Army of Thieves: Enhancing Black-Box Model Extraction via Ensemble-based Sample Selection"
+2. [[Link to paper](https://openaccess.thecvf.com/content/WACV2024/html/Jindal_Army_of_Thieves_Enhancing_Black-Box_Model_Extraction_via_Ensemble_Based_WACV_2024_paper.html)]
+3. [[Link to code](https://github.com/akshitjindal1/AOT_WACV)]
