@@ -6,7 +6,7 @@ import { Section } from '@/components/ui/section';
 import { Card, CardContent } from '@/components/ui/card';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Calendar, Clock, ArrowRight, Search, Tag } from '@/components/ui/Icons'; 
-import { formatDate, calculateReadTime } from '@/lib/utils';
+import { formatDate, calculateReadingTime } from '@/lib/utils';
 import { BlogPost } from '@/lib/types';
 
 export default function BlogListPage() {
