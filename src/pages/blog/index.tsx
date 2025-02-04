@@ -152,15 +152,16 @@ function BlogPostCard({ post }: { post: BlogPost }) {
 }
 
 // Sample blog posts data
-const blogPosts = [
-  {
-    title: "Understanding Model Extraction Attacks",
-    slug: "understanding-model-extraction-attacks",
-    date: "2024-02-04",
-    author: "Akshit Jindal",
-    image: "/assets/img/blog/1.jpg",
-    excerpt: "An in-depth look at how model extraction attacks work and their implications for ML security.",
-    tags: ["ML Security", "Model Extraction", "Research"],
-    readingTime: 8
-  }
+const blogPosts: BlogPost[] = [
+    {
+      title: "Understanding Model Extraction Attacks",
+      slug: "understanding-model-extraction-attacks",
+      date: "2024-02-01",
+      author: "Akshit Jindal",
+      image: "/assets/img/blog/post-1.jpg",
+      excerpt: "An in-depth look at how model extraction attacks work and their implications for ML security.",
+      content: "Full content of the blog post goes here...",
+      tags: ["ML Security", "Model Extraction", "Research"],
+      readingTime: 8
+    }
 ];

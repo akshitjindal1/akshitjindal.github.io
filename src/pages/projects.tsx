@@ -131,16 +131,16 @@ const categories = [
   { id: 'ml-security', name: 'ML Security' },
   { id: 'adversarial-ml', name: 'Adversarial ML' },
   { id: 'research', name: 'Research' }
-];
+] as const;
 
-const projects = [
+const projects: Project[] = [
   {
     title: 'Model Extraction Defense Framework',
     description: 'A comprehensive framework for defending against model extraction attacks using ensemble-based techniques.',
-    image: '/assets/img/projects/1.jpg',
+    image: '/assets/img/projects/model-extraction.jpg',
     category: 'ml-security',
     technologies: ['Python', 'PyTorch', 'TensorFlow'],
     github: 'https://github.com/akshitjindal1/project-1',
     demo: '#'
-  }
+  },
 ];

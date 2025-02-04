@@ -1,37 +1,44 @@
 // src/lib/types.ts
+
+export type PublicationType = "conference" | "journal" | "workshop" | "patent";
+
 export interface Publication {
-  title: string
-  authors: string[]
-  venue: string
-  year: number
-  doi?: string
-  pdf?: string
-  code?: string
-  slides?: string
-  poster?: string
-  abstract: string
-  tags: string[]
+  title: string;
+  authors: string;
+  venue: string;
+  year: number;
+  type: PublicationType;
+  abstract: string;
+  pdf?: string;
+  code?: string;
+  slides?: string;
+  tags: string[];  // Adding the required tags field
 }
 
+
+// src/lib/types.ts
+type ProjectCategory = 'ml-security' | 'adversarial-ml' | 'research';
+
 export interface Project {
-  title: string
-  description: string
-  technologies: string[]
-  image: string
-  github?: string
-  demo?: string
-  category: 'ml-security' | 'adversarial-ml' | 'research'
+  title: string;
+  description: string;
+  image: string;
+  category: ProjectCategory;
+  technologies: string[];
+  github?: string;
+  demo?: string;
 }
 
 export interface BlogPost {
-  title: string
-  slug: string
-  date: string
-  author: string
-  excerpt: string
-  content: string
-  tags: string[]
-  readingTime: number
+  title: string;
+  slug: string;
+  date: string;
+  author: string;
+  excerpt: string;
+  content: string;  
+  image: string;
+  tags: string[];
+  readingTime: number;
 }
 
 export interface BlogPostFrontMatter {

@@ -78,13 +78,13 @@ export default function PublicationsPage() {
 }
 
 // Publication Card Component
-function PublicationCard({ publication }) {
-  // Function to generate citation text
+import { Publication, PublicationType } from '@/lib/types';
+
+function PublicationCard({ publication }: { publication: Publication }) {
   const getCitation = () => {
     return `${publication.authors}. (${publication.year}). ${publication.title}. ${publication.venue}.`;
   };
 
-  // Function to copy citation to clipboard
   const copyToClipboard = () => {
     navigator.clipboard.writeText(getCitation());
   };
@@ -170,19 +170,21 @@ const publications = [
     authors: "Akshit Jindal, Vikram Goyal, Saket Anand, Chetan Arora",
     venue: "WACV 2024",
     year: 2024,
-    type: "conference",
+    type: "conference" as PublicationType,
     abstract: "We propose a novel approach to enhance the effectiveness of black-box model extraction attacks using ensemble-based sample selection strategies...",
     pdf: "#",
     code: "#",
-    slides: "#"
+    slides: "#",
+    tags: ["Model Extraction", "Machine Learning Security", "WACV"]
   },
   {
     title: "Method and system for assigning unique voice for electronic device",
     authors: "Sourabh Tiwari, Akshit Jindal, Saksham Goyal, Vinay Vasanth Patage, Ravibhushan B Tayshete",
     venue: "US Patent Office",
     year: 2022,
-    type: "patent",
+    type: "patent" as PublicationType,
     abstract: "A novel method for generating and assigning unique voice characteristics to electronic devices...",
-    pdf: "#"
+    pdf: "#",
+    tags: ["Text-to-Speech", "Voice Technology", "Patent"]
   }
 ];
