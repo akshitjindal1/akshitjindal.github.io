@@ -17,11 +17,10 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold">
-                Machine Learning Security Researcher
+                Site under construction.
               </h1>
               <p className="text-xl text-neutral-600 dark:text-neutral-300">
-                PhD Scholar at IIIT-Delhi exploring the security aspects of machine learning systems,
-                focusing on model extraction and adversarial attacks.
+                Though my CV is up to date.
               </p>
               <div className="flex space-x-4">
                 <Link href="/publications">
